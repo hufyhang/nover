@@ -31,7 +31,6 @@
   "dependencies": {
       "q": "1.0.0",
       "colors": "0.6.2",
-      "express": "3.4.8",
-      "connect": "2.12.0"
+      "express": "3.4.8"
   }
 }
