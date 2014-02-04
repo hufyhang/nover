@@ -1,0 +1,18 @@
+{
+    "port": 8080,
+    "log": 1,
+    "root": "/Users/feifeihang/",
+    "sites": [{
+        "domain": "/",
+        "local": "$ROOT/temp/server/public"
+    },
+    {
+        "domain": "/test",
+        "local": "$ROOT/Desktop/html"
+    }],
+    "apis": [{
+        "uri": "/api/name/:name",
+        "method": "get",
+        "local": "$ROOT/Workstation/nover/example/api.js"
+    }]
+}
