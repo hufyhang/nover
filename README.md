@@ -45,11 +45,14 @@ Sample config
 Sample RESTful API
 ==================
 
-**To register Node.js powered APIs, please make sure the exposes of `module.export = function (req, res) { ... }`**
+**To register Node.js powered APIs, please make sure the exposes of `__get`, `__post`, `__delete`, `__put`, and `__all`**
 
 ```javascript
 #!/usr/bin/env node
-var nover = require('../lib/nover');
-nover(process.argv);
+exports.__get = function (req, res) {
+    'use strict';
+    var name = req.params.name;
+    res.send('Hello, ' + name);
+};
 ```
 

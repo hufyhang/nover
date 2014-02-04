@@ -14,5 +14,10 @@
         "uri": "/api/name/:name",
         "method": "get",
         "local": "$ROOT/Workstation/nover/example/api.js"
+    },
+    {
+        "uri": "/api/name",
+        "method": "post",
+        "local": "$ROOT/Workstation/nover/example/api.js"
     }]
 }
