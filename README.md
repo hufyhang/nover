@@ -16,7 +16,7 @@ Supports
 Usage
 =====
 
-nover <config_file>
+    nover <config_file>
 
 Sample config
 =============
