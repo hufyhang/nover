@@ -1,0 +1,37 @@
+{
+  "name": "nover",
+  "version": "0.1.0",
+  "description": "A Node.js powered HTTP server.",
+  "main": "bin/nover.js",
+  "bin": {
+    "nover": "bin/nover.js"
+  },
+  "directories": {
+      "bin": "bin",
+      "lib": "lib",
+      "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hufyhang/nover.git"
+  },
+  "keywords": [
+    "Node.js",
+    "server",
+    "HTTP"
+  ],
+  "author": "Feifei Hang <l.daniel.hung@gmail.com> (http://feifeihang.github.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hufyhang/nover/issues"
+  },
+  "dependencies": {
+      "q": "1.0.0",
+      "colors": "0.6.2",
+      "express": "3.4.8",
+      "connect": "2.12.0"
+  }
+}
