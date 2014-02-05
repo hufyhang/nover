@@ -12,6 +12,7 @@ Supports
 
 * Static Web sites.
 * RESTful APIs written in Node.js.
+* Socket.io
 * Virutal Hosts
 
 Usage
@@ -51,6 +52,10 @@ Sample config
         "sites": [{
             "url": "/",
             "local": "$ROOT/Desktop/html"
+        }],
+        "sockets": [{
+            "port": 8090,
+             "local": "$ROOT/socket/app.js"
         }]
     },
     {
@@ -74,6 +79,29 @@ exports.__get = function (req, res) {
     'use strict';
     var name = req.params.name;
     res.send('Hello, ' + name);
+};
+```
+
+Sample Socket.io App
+====================
+
+**Please make sure your app exposes `__.socket` for Nover.**
+
+```javascript
+#!/usr/bin/env node
+
+exports.__socket = function (server) {
+    'use strict';
+    var io = require('socket.io').listen(server);
+
+    io.sockets.on('connection', function (socket) {
+        'use strict';
+        socket.emit('news', {hello: 'world!!!'});
+        socket.on('message', function (data) {
+            console.log(data);
+        });
+    });
+
 };
 ```
 
