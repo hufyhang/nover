@@ -1,6 +1,6 @@
 ## Nover
 
-#### The Node.js powered HTTP server.
+#### A Node.js powered HTTP server.
 
 Why Nover?
 ==========
