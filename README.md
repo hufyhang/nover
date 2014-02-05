@@ -12,6 +12,7 @@ Supports
 
 * Static Web sites.
 * RESTful APIs written in Node.js.
+* Virutal Hosts
 
 Usage
 =====
@@ -25,19 +26,39 @@ Sample config
 {
     "port": 8080,
     "log": 1,
-    "root": "/Users/admin/",
+    "root": "/Users/nover/",
+    "top": "example.io",
     "sites": [{
-        "domain": "/",
-        "local": "$ROOT/static/public"
+        "url": "/",
+        "local": "$ROOT/server/public"
     },
     {
-        "domain": "/test",
-        "local": "$ROOT/Desktop/html"
+        "url": "/test",
+        "local": "$ROOT/html"
     }],
     "apis": [{
         "uri": "/api/name/:name",
         "method": "get",
-        "local": "$ROOT/example/api.js"
+        "local": "$ROOT/Workstation/nover/example/api.js"
+    },
+    {
+        "uri": "/api/name",
+        "method": "post",
+        "local": "$ROOT/Workstation/nover/example/api.js"
+    }],
+    "vhosts": [{
+        "subdomain": "foo.example.io",
+        "sites": [{
+            "url": "/",
+            "local": "$ROOT/Desktop/html"
+        }]
+    },
+    {
+         "subdomain": "bar.example.io",
+         "sites": [{
+             "url": "/",
+             "local": "$ROOT/Sites"
+         }]
     }]
 }
 ```

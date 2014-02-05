@@ -2,12 +2,13 @@
     "port": 8080,
     "log": 1,
     "root": "/Users/feifeihang/",
+    "top": "example.io",
     "sites": [{
-        "domain": "/",
+        "url": "/",
         "local": "$ROOT/temp/server/public"
     },
     {
-        "domain": "/test",
+        "url": "/test",
         "local": "$ROOT/Desktop/html"
     }],
     "apis": [{
@@ -19,5 +20,19 @@
         "uri": "/api/name",
         "method": "post",
         "local": "$ROOT/Workstation/nover/example/api.js"
+    }],
+    "vhosts": [{
+        "subdomain": "foo.example.io",
+        "sites": [{
+            "url": "/",
+            "local": "$ROOT/Desktop/html"
+        }]
+    },
+    {
+         "subdomain": "bar.example.io",
+         "sites": [{
+             "url": "/",
+             "local": "$ROOT/Sites"
+         }]
     }]
 }
