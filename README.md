@@ -2,8 +2,6 @@
 
 #### A Node.js powered HTTP server.
 
-![Logo](nover-logo/logo_white_web.jpg)
-
 Why Nover?
 ==========
 

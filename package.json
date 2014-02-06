@@ -9,7 +9,6 @@
   "directories": {
       "bin": "bin",
       "lib": "lib",
-      "nover-logo": "nover-logo",
       "example": "example"
   },
   "scripts": {
