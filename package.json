@@ -1,6 +1,6 @@
 {
   "name": "nover",
-  "version": "0.1.10",
+  "version": "0.1.12",
   "description": "A Node.js powered HTTP server.",
   "main": "bin/nover.js",
   "bin": {
