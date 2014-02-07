@@ -26,7 +26,9 @@ Sample config
 ```json
 {
     "port": 8080,
-    "log": 1,
+    "log": "true",
+    "origins": "*",
+    "credentials": "false",
     "root": "/Users/nover/",
     "top": "example.io",
     "sites": [{
@@ -46,6 +48,10 @@ Sample config
         "uri": "/api/name",
         "method": "post",
         "local": "$ROOT/Workstation/nover/example/api.js"
+    }],
+    "sockets": [{
+        "port": "$PORT",
+        "local": "$PWD/socket.js"
     }],
     "vhosts": [{
         "subdomain": "foo.example.io",
