@@ -2,7 +2,7 @@
     "port": 8080,
     "log": 1,
     "root": "/Users/feifeihang/",
-    "top": "example.io",
+    "domain": "example.io",
     "sites": [{
         "url": "/",
         "local": "$ROOT/temp/server/public"
