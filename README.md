@@ -54,7 +54,7 @@ Sample config
         "local": "$PWD/socket.js"
     }],
     "vhosts": [{
-        "subdomain": "foo.example.io",
+        "subdomain": "foo.$DOMAIN",
         "sites": [{
             "url": "/",
             "local": "$ROOT/Desktop/html"
@@ -65,7 +65,7 @@ Sample config
         }]
     },
     {
-         "subdomain": "bar.example.io",
+         "subdomain": "bar.$DOMAIN",
          "sites": [{
              "url": "/",
              "local": "$ROOT/Sites"
