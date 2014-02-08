@@ -13,7 +13,7 @@ Supports
 * Static Web sites.
 * RESTful APIs written in Node.js.
 * Socket.io
-* Virutal Hosts
+* Virtual Hosts
 
 Usage
 =====
