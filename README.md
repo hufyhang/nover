@@ -20,6 +20,15 @@ Usage
 
     nover <config_file>
 
+Config Tips
+===========
+
+* If `port` is not given in the top section of config files, HTTP port will be assigned to `process.env.PORT`.
+* Use `$ROOT` as the shorthand of the document root defined by `root`.
+* Use `$PWD` to represent the location of the config file.
+* Use `$DOMAIN` to indicate the main domain set by `domain`.
+* For WebSocket, `$PORT` can be used to indicate the same port defined by `port` in the top section of config file.
+
 Sample config
 =============
 
