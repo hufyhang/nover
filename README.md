@@ -29,6 +29,7 @@ Config Tips
 * Use `$PWD` to represent the location of the config file.
 * Use `$DOMAIN` to indicate the main domain set by `domain`.
 * For WebSocket, `$PORT` can be used to indicate the same port defined by `port` in the top section of config file.
+* When setting rewrites, please be awared that the request urls will also contain a leading `/` (slash). For example, to rewrite `example.com/nover` the `pattern` should be something like `^/nover/?$` rather than `^nover/?$`.
 
 Sample config
 =============
