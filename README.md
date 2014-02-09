@@ -13,6 +13,7 @@ Supports
 * Static Web sites.
 * RESTful APIs written in Node.js.
 * Socket.io
+* URL Rewrite
 * Virtual Hosts
 
 Usage
@@ -40,6 +41,14 @@ Sample config
     "credentials": "false",
     "root": "/Users/nover/",
     "top": "example.io",
+    "rewrite": [{
+      "pattern": "^/service/?$",
+      "replace": "/search/"
+    },
+    {
+      "pattern": "^/show/([0-9]+)/?$",
+      "replace": "/git/#/$1"
+    }],
     "sites": [{
         "url": "/",
         "local": "$ROOT/server/public"
