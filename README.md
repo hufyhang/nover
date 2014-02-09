@@ -120,3 +120,7 @@ exports.__socket = function (server) {
 };
 ```
 
+License
+=======
+
+Nover is licensed under MIT.
