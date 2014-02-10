@@ -10,11 +10,12 @@ As a Web developer, I often found that I really need a HTTP server which is more
 Supports
 ========
 
-* Static Web sites.
-* RESTful APIs written in Node.js.
+* Static Web sites
+* RESTful APIs written in Node.js
 * Socket.io
 * URL Rewrite
 * Virtual Hosts
+* Customized middleware
 
 Usage
 =====
@@ -110,7 +111,7 @@ exports.__get = function (req, res) {
 Sample Socket.io App
 ====================
 
-**Please make sure your app exposes `__.socket` for Nover.**
+**Please make sure your app exposes `__socket` for Nover.**
 
 ```javascript
 #!/usr/bin/env node
@@ -127,6 +128,19 @@ exports.__socket = function (server) {
         });
     });
 
+};
+```
+
+Sample Middleware
+=================
+
+**Please make sure your module exposes `__middle`**
+
+```javascript
+exports.__middle = function (req, res, next) {
+    'use strict';
+    console.log(req.url);
+    next();
 };
 ```
 
