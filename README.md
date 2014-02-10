@@ -12,7 +12,7 @@ Supports
 
 * Static Web sites
 * RESTful APIs written in Node.js
-* Socket.io
+* WebSocket
 * URL Rewrite
 * Virtual Hosts
 * Customized middleware
