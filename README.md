@@ -42,6 +42,9 @@ Sample config
     "origins": "*",
     "credentials": "false",
     "root": "/Users/nover/",
+    "middlewares": [
+        "$ROOT/middle/handler.js"
+    ],
     "top": "example.io",
     "rewrite": [{
       "pattern": "^/service/?$",
