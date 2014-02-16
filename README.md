@@ -31,6 +31,7 @@ Config Tips
 * Use `$DOMAIN` to indicate the main domain set by `domain`.
 * For WebSocket, `$PORT` can be used to indicate the same port defined by `port` in the top section of config file.
 * When setting rewrites, please be awared that the request urls will also contain a leading `/` (slash). For example, to rewrite `example.com/nover` the `pattern` should be something like `^/nover/?$` rather than `^nover/?$`.
+* System variables are not supported in the `data` attributes of APIs and Socekts.
 
 Sample config
 =============
@@ -65,7 +66,10 @@ Sample config
     "apis": [{
         "uri": "/api/name/:name",
         "method": "get",
-        "local": "$ROOT/Workstation/nover/example/api.js"
+        "local": "$ROOT/Workstation/nover/example/api.js",
+        "data": {
+             "version": 1
+        }
     },
     {
         "uri": "/api/name",
@@ -104,7 +108,7 @@ Sample RESTful API
 
 ```javascript
 #!/usr/bin/env node
-exports.__get = function (req, res) {
+exports.__get = function (req, res, data) {
     'use strict';
     var name = req.params.name;
     res.send('Hello, ' + name);
@@ -119,7 +123,7 @@ Sample Socket.io App
 ```javascript
 #!/usr/bin/env node
 
-exports.__socket = function (server) {
+exports.__socket = function (server, data) {
     'use strict';
     var io = require('socket.io').listen(server);
 
