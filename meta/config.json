@@ -1,0 +1,99 @@
+{
+    "log": "true",
+    "port": 8080,
+    "root": "/Users/example",
+    "favicon": "$ROOT/icon.png",
+    "domain": "localhost.me",
+    "origins": "localhost.me:8080",
+    "credentials": "true",
+    "middlewares": [
+      "$ROOT/middle.js",
+      "$ROOT/middle2.js"
+    ],
+    "rewrite": [{
+      "pattern": "^/service/?$",
+      "replace": "/search/"
+    },
+    {
+      "pattern": "^/show/([0-9]+)/?$",
+      "replace": "/git/#/$1"
+    }],
+    "sites": [{
+        "url": "/",
+        "local": "$ROOT/server/public"
+    },
+    {
+        "url": "/git",
+        "local": "$ROOT/git101"
+    },
+    {
+        "url": "/socket",
+        "local": "$ROOT/socket"
+    }],
+    "apis": [{
+        "uri": "/api/name/:name",
+        "method": "get",
+        "local": "$ROOT/apis/api.js",
+        "data": "To be or not to be..."
+    },
+    {
+        "uri": "/api/name",
+        "method": "post",
+        "local": "$ROOT/apis/api.js"
+    }],
+    "sockets": [{
+        "port": "$PORT",
+        "local": "$ROOT/sockets/socekt.js",
+        "data": {
+          "info": "HELLO WORLD!!!!!!!!!!!!!!!"
+        }
+    }, {
+       "port": 8888,
+       "local": "$ROOT/sockets/beep.js",
+       "data": {
+         "hosts": [{
+           "host": "www.bbc.co.uk",
+           "alias": "BBC"
+         },
+         {
+           "host": "www.youtube.com",
+           "alias": "Youtube"
+         },
+         {
+            "host": "www.bing.com",
+            "alias": "Bing"
+         }]
+       }
+    }],
+    "vhosts": [{
+        "subdomain": "foo.$DOMAIN",
+        "sites": [{
+            "url": "/",
+            "local": "$ROOT/Desktop/html"
+        },
+        {
+            "url": "/socket",
+            "local": "$ROOT/temp/socket"
+        }],
+        "apis": [{
+            "uri": "/api/info",
+            "method": "post",
+            "local": "$ROOT/temp/api.js"
+        }],
+        "sockets": [{
+            "port": 8800,
+            "local": "$ROOT/temp/socket/app.js"
+        },
+        {
+            "port": 9999,
+            "local": "$ROOT/temp/socket/app.js"
+        }]
+    },
+    {
+        "subdomain": "bar.$DOMAIN",
+        "sites": [{
+            "url": "/",
+            "local": "$ROOT/Sites"
+        }]
+    }]
+}
