@@ -25,6 +25,7 @@ Usage
 Config Tips
 ===========
 
+* Run `nover -h` to show an example nover config.
 * If `port` is not given in the top section of config files, HTTP port will be assigned to `process.env.PORT`.
 * Use `$ROOT` as the shorthand of the document root defined by `root`.
 * Use `$PWD` to represent the location of the config file.

@@ -9,6 +9,7 @@
   "directories": {
       "bin": "bin",
       "lib": "lib",
+      "meta": "meta",
       "example": "example"
   },
   "scripts": {
