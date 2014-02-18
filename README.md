@@ -56,6 +56,9 @@ Sample config
       "pattern": "^/show/([0-9]+)/?$",
       "replace": "/git/#/$1"
     }],
+    "require": [
+        "$ROOT/addon.js"
+    ],
     "sites": [{
         "url": "/",
         "local": "$ROOT/server/public"
@@ -149,6 +152,28 @@ exports.__middle = function (req, res, next) {
     'use strict';
     console.log(req.url);
     next();
+};
+```
+
+Sample Require Module
+=====================
+
+**Please make sure your required Nover module exposes `__require`**
+
+The parameter data is an object that contains:
+
+* http: The main HTTP object of Nover server.
+* port: The main port number.
+* root: The `root` directory.
+* domain: The main domain.
+
+```javascript
+exports.__require = function (data) {
+     'use strict';
+     var http = data.http;
+     http.get('/dev/api/:username', function () {
+             ...
+     });
 };
 ```
 
