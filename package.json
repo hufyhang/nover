@@ -7,10 +7,10 @@
     "nover": "bin/nover.js"
   },
   "directories": {
-      "bin": "bin",
-      "lib": "lib",
-      "meta": "meta",
-      "example": "example"
+    "bin": "bin",
+    "lib": "lib",
+    "meta": "meta",
+    "example": "example"
   },
   "scripts": {
     "test": "mocha test/nover.test.js"
@@ -30,8 +30,9 @@
     "url": "https://github.com/hufyhang/nover/issues"
   },
   "dependencies": {
-      "q": "1.0.0",
-      "colors": "0.6.2",
-      "express": "3.1.0"
+    "q": "1.0.0",
+    "colors": "0.6.2",
+    "express": "3.1.0",
+    "mocha": "~1.17.1"
   }
 }
