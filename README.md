@@ -21,11 +21,11 @@ Supports
 Usage
 =====
 
-Without CPU cluster load blancing:
+Without CPU cluster load balancing:
 
     nover <config_file>
 
-With CPU cluster load blancing:
+With CPU cluster load balancing:
 
     nover -c <config_file>
 
