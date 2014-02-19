@@ -18,6 +18,9 @@
       "pattern": "^/show/([0-9]+)/?$",
       "replace": "/git/#/$1"
     }],
+    "require": [
+        "$ROOT/addon.js"
+    ],
     "sites": [{
         "url": "/",
         "local": "$ROOT/server/public"
