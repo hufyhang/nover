@@ -13,7 +13,7 @@
       "example": "example"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha test/nover.test.js"
   },
   "repository": {
     "type": "git",
