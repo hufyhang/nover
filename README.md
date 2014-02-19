@@ -2,6 +2,8 @@
 
 #### A Node.js powered HTTP server.
 
+[![Build Status](https://travis-ci.org/hufyhang/nover.png?branch=master)](https://travis-ci.org/hufyhang/nover)
+
 Why Nover?
 ==========
 
