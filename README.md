@@ -4,6 +4,8 @@
 
 [![Build Status](https://travis-ci.org/hufyhang/nover.png?branch=master)](https://travis-ci.org/hufyhang/nover)
 
+[![NPM](https://nodei.co/npm/nover.png)](https://nodei.co/npm/nover/)
+
 Why Nover?
 ==========
 
